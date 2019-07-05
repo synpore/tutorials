@@ -18,6 +18,11 @@
             <artifactId>exchange-rate-api</artifactId>
             <version>${exchange-rate-api.version}</version>
         </dependency>
+        <dependency>
+            <artifactId>exchange-rate-impl</artifactId>
+            <groupId>com.baeldung</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <properties>

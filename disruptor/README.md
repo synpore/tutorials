@@ -1,7 +1,3 @@
-## Disruptor
+## Relevant articles:
 
-This module contains articles about LMAX Disruptor
-
-### Relevant articles:
-
-- [Concurrency with LMAX Disruptor – An Introduction](https://www.baeldung.com/lmax-disruptor-concurrency)
+- [Concurrency with LMAX Disruptor – A你n Introduction](http://www.baeldung.com/lmax-disruptor-concurrency)
