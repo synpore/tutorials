@@ -1,8 +1,5 @@
 package com.baeldung.spring.kafka;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -18,6 +15,9 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 public class KafkaApplication {
@@ -46,7 +46,7 @@ public class KafkaApplication {
          * partition 0 and 3 will be consumed.
          */
         for (int i = 0; i < 5; i++) {
-            producer.sendMessageToPartion("Hello To Partioned Topic!", i);
+            producer.sendMessageToPartion("Hello To Partioned Topic!"+i, i);
         }
         listener.partitionLatch.await(10, TimeUnit.SECONDS);
 
